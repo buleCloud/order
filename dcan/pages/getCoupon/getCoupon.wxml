@@ -1,0 +1,44 @@
+<template name="owncoupon"> 
+ <view class="content">
+    <view class="bgd">
+      <image src="../../images/bgd.png" class="imgs"></image>
+      <view class="top">
+        <view class="item_left"><image class="size" src="{{logo_url}}"></image></view>
+        <view class="item_right">
+          <view class="leftside">
+            <view class="one">{{brand_name}}</view>
+            <view class="two"><view class="titles">{{title}}</view></view>
+          </view>
+          <view class="rightside">
+            <view class="sideone" class="find" bindtap="getCoupon" data-cardid="{{card_id}}" data-cardext="{{card_ext}}"  disabled="{{disabled}}" >领取</view>
+            <view class="sidetwo" class="finded">还有{{sku}}张未领取 </view>
+          </view>
+        </view>
+      </view>
+      <view class="bottom"> 有效期：{{use_date}}</view>
+    </view>
+  </view>
+</template>  
+
+<template name="zbcoupon"> 
+ <view class="content">
+    <view class="bgd">
+      <image src="../../images/bgd.png" class="imgs"></image>
+      <view class="top"><view class="item_left"><image class="size" src="{{logo_url}}"></image></view>
+        <view class="item_right">
+        <view class="leftside"> 
+           <view class="one">{{brand_name}}</view>
+           <view class="two"><view class="titles">{{title}}</view> </view>
+        </view>
+        <view class="rightside">
+          <view class="sideone" class="find" bindtap="getCoupon" data-cardid="{{card_id}}" data-cardext="{{card_ext}}" disabled="{{disabled}}" >
+              领取
+          </view>
+          <view class="sidetwo" class="finded">还有{{sku}}张未领取 </view>
+          </view>
+        </view>
+      </view>
+      <view class="bottom"> 有效期：{{use_date}}</view>
+    </view>
+  </view>
+</template>  

@@ -1,0 +1,14 @@
+{
+  "extEnable": true,
+  "extAppid": "wx0f3b66895668d7b4",
+  "ext": {
+    "appid": "wx0f3b66895668d7b4",
+    "name": "测试第三方小程序",
+    "host": "http://dev-xcx.xianlaohu.com",
+    "sence":"40000000100000001"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}

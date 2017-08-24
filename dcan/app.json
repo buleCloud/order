@@ -1,0 +1,22 @@
+{
+  "pages": [  
+     "pages/index/index",
+     "pages/order/details/details",
+     "pages/broadside/broadside",    
+     "pages/getCoupon/getCoupon",
+     "pages/dish/list/list",
+     "pages/dish/details/details",
+     "pages/user/user",
+     "pages/shopCart/shopCart",     
+     "pages/coupon/coupon",
+     "pages/order/list/list",
+     "pages/pay/pay",
+     "pages/chooseCoupon/chooseCoupon"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "#fff"
+  } 
+}

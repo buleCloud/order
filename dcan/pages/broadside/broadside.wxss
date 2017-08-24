@@ -1,0 +1,45 @@
+.broad_side_box{
+  width:115rpx;
+  min-height:40rpx;
+  background: #f9f9f9;
+  padding:20rpx 20rpx; 
+  border-bottom:2rpx solid #ededed;
+}
+
+.broad_active{
+  background:#fff;
+}
+
+.border_bottom_line{
+  width:130rpx;
+  height:2rpx;
+   margin:0 auto; 
+   background: #ededed
+}
+
+.broad_text{
+  width: 100%;
+  min-height:40rpx;
+  line-height: 40rpx;
+}
+.broad_text_more{
+  width: 100%;
+  min-height:40rpx;
+  line-height: 34rpx;
+}
+
+.left_icon{
+  width:26rpx;
+  height:auto;
+  float: left;
+}
+.left_icon image{
+  width:26rpx;
+  height:26rpx;
+}
+.right_text{
+  width:80rpx;
+  height:auto;
+  line-height: 34rpx;
+  float: right;
+}

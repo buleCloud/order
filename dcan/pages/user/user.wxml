@@ -1,0 +1,25 @@
+<view class="page public_grey_bg">
+  <view class="user_title">
+    <view class="user_padding"></view>
+    <image src="{{userInfo.avatarUrl}}"></image>
+    <text class="nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="action_box" bindtap="goOrderList">
+    <view class="action_list">
+      <image src="../../images/dingdan.png" class="action_icon"></image>
+      <text class="action_title">我的订单</text>
+      <image src="../../images/jiantou.png" class="action_arrow"></image>
+    </view>
+  </view>
+  <view class="action_box" bindtap="goCoupon">
+    <view class="action_list">
+      <image src="../../images/juan.png" class="action_icon" aspectFill></image>
+      <text class="action_title">我的优惠券</text>
+      <image src="../../images/jiantou.png" class="action_arrow"></image>
+    </view>
+  </view>  
+  <view class="call_box" bindtap="calling" wx:if="{{tel != ''}}">
+    <image src="../../images/lianxi.png"></image>
+    <text>联系商家</text>
+  </view>
+</view>

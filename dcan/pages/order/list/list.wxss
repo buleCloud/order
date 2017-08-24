@@ -1,0 +1,77 @@
+.order_list{
+  width:100%;
+  height:290rpx;
+  background: #fff;
+}
+.order_list_cont{
+  width:92%;
+  height:inherit;
+  margin:0 auto;
+}
+.order_out_title{
+  width:100%;
+  height:60rpx;
+  line-height: 66rpx;
+  border-bottom:2rpx solid #ededed;
+  color: #666;
+}
+.order_dish{
+  width:100%;
+  height:150rpx;
+  border-bottom:2rpx solid #ededed;  
+}
+
+.max_dish_width{
+  width:100%;
+  height:100rpx;
+  overflow:hidden; 
+}
+
+.left_order_dish_info{
+  width:560rpx;
+  height:inherit;
+  float: left;
+}
+.right_order_dish_status{
+  float:right;
+  line-height: 150rpx;
+  color:#666;
+}
+.more_line_dish{
+  width:100%;
+  height:50rpx;
+  line-height: 50rpx;
+}
+.one_line_dish{
+  width:100%;
+  height:100rpx;
+  line-height: 100rpx;
+}
+
+.left_title{
+  width:60%;
+  height:inherit;
+  float:left;
+  display: block;
+}
+.right_price{
+  width:40%;
+  height:inherit;
+  float:left;
+  display: block;
+}
+.order_bottom_box{
+  width:100%;
+  height:70rpx;
+  line-height: 70rpx;
+}
+
+.order_bottom_box text{
+  color:#666;
+  font-size: 20rpx;
+}
+.order_price{
+  color:#ef4747;
+  font-size: 32rpx;
+  float: right;
+}

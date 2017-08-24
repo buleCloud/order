@@ -1,0 +1,171 @@
+.pay_type_box{
+  width:100%;
+  height:90rpx;
+}
+.pay_type_title{
+  width:auto;
+  height:90rpx;
+  line-height: 90rpx; 
+  margin-left:4%;
+  font-size: 28rpx;
+  float: left;
+}
+.pay_type{
+  width:auto;
+  height:90rpx;
+  line-height: 90rpx;
+  margin-right:4%;
+  color:#666;
+  float: right;
+}
+.input_box{
+  width:580rpx;
+  height:230rpx;
+  margin:0 auto;
+}
+.input_title{
+  width:100%;
+  height:60rpx;
+  line-height: 70rpx;
+  font-size: 20rpx;
+  margin-top:14rpx;
+}
+.input_cont{
+  width:100%;
+  height:60rpx;
+  margin-bottom: 20rpx;
+}
+.input_name{
+  width:100rpx;
+  height:60rpx;
+  line-height: 60rpx;
+  text-align: right;
+  float:left;
+}
+.input_cont input{
+  width:420rpx;
+  height:60rpx;
+  float:left;
+  background: #f0f0f0;
+  border-radius: 4rpx;
+}
+.order_title{
+  width:92%;
+  height:90rpx;
+  line-height: 90rpx;
+  font-size: 28rpx;
+  border-bottom:2rpx solid #ededed;
+  margin:0 auto 10rpx;
+}
+.order_dish_list{
+  width:88%;
+  height:60rpx;
+  margin: 0 auto;
+  line-height: 60rpx;  
+}
+.order_dish_list .dish_name{
+  width:400rpx;
+  height:inherit;
+  float:left;
+}
+.order_dish_list .dish_count{
+  width:80rpx;
+  height:inherit;
+  color:#666;
+  float: left;
+}
+.order_dish_list .dish_price{
+  width:auto;
+  height: inherit;
+  float: right;
+}
+.order_line{
+  width:92%;
+  height:2rpx;
+  background: #ededed;
+  margin:0 auto;
+}
+
+.coupon_box{
+  width:90%;
+  height: 76rpx;
+  line-height: 75rpx;
+  margin-left:6%;  
+}
+.coupon_title{
+  float:left;
+  display: block;  
+}
+.coupon_name{
+  width:auto;
+  height: inherit;
+  float:right;
+  display: block;  
+  margin-right:30rpx; 
+  font-size: 20rpx;
+}
+.coupon_arrow{
+  float:right;
+  width:14rpx;
+  height:20rpx;
+  margin:26rpx 0 0 0;  
+  display: block;
+}
+
+.order_price_box{
+  width:90%;
+  height:90rpx;
+  margin:0 auto;
+  line-height: 90rpx;
+}
+.totle_price{
+  float:right;
+}
+.cash_price{
+  float:right;
+  margin-left:50rpx;
+  font-size: 28rpx;
+}
+.coupon_price{
+  float:right;
+  margin-left:26rpx;
+}
+.order_remark{
+  width:88%;
+  height:80rpx;
+  background: #f0f0f0;
+  margin:0 auto;
+  border-radius: 8rpx;
+  margin-top:20rpx;
+  padding:10rpx;
+}
+.fix_box{
+  width:100%;
+  height:100rpx;
+  position: fixed;
+  left:0;
+  bottom:0;
+  z-index: 999;
+  background: #f3f3f3;
+  border-top:2rpx solid #ededed;
+}
+.create_order_btn{
+  width:180rpx;
+  height:100rpx;
+  background:#f4b31c;
+  line-height: 100rpx;
+  float:right;
+  text-align: center;
+  color:#fff; 
+}
+.pay_price_box{
+  width:auto;
+  height:100rpx;
+  line-height: 100rpx;
+  float:left;
+  margin-left:4%;
+}
+.pay_price_box text{
+  font-size:32rpx;
+  color: #ef4747;
+}

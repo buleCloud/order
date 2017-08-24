@@ -1,0 +1,66 @@
+.coupon_list{
+  width:96%;
+  height:200rpx;
+  margin:0 auto 10rpx;
+  position: relative;
+}
+.coupon_list .coupon_bg{
+  width:100%;
+  height:100%;
+}
+.coupon_cont{
+  width:100%;
+  height:200rpx;
+  position: absolute;
+  left:0;
+  top:0;
+}
+.left_coupon_price{
+  width:184rpx;
+  height: 200rpx;
+  font-size: 20rpx;
+  color:#9b9b9b;
+  text-align: center;
+  float:left;
+}
+.top_price{
+  width:100%;
+  height:90rpx;
+  line-height: 140rpx;
+  color: #ef4747;
+}
+.top_price text{
+  font-size: 48rpx;
+}
+.bottom_desc{
+  width:80%;
+  display: block;
+  margin:15rpx auto;
+}
+.right_coupon_desc{
+  width:460rpx;
+  height: 200rpx;
+  float:left;
+  margin-left:30rpx;
+}
+.coupon_title{
+  width:100%;
+  height:100rpx;
+  line-height: 130rpx;
+  font-size: 32rpx;
+}
+.coupon_text_desc{
+  font-size: 20rpx;
+  line-height: 30rpx;
+}
+
+.submitBtn {
+  width: 100%;
+  background-color: #ffaf58;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  line-height: 80rpx;
+  z-index: 999;
+}

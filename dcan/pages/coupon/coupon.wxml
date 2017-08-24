@@ -1,0 +1,25 @@
+<block wx:if="{{!isShowImage}}">
+  <view class="page public_grey_bg">
+    <view class="public_padding_big"></view>
+    <view class="coupon_list" wx:for="{{coupon_list}}" wx:key="{{item.card_id}}">
+      <image src="../../images/youhuijuan.png" class="coupon_bg"></image>
+      <view class="coupon_cont">
+        <view class="left_coupon_price">
+          <view class="top_price" wx:if="{{item.reduce_cost}}">
+            ￥<text>{{item.reduce_cost / 100}}</text>
+          </view>
+          <view class="top_price" wx:else>
+            <text>{{(100-item.discount)/10}}折</text>
+          </view>
+          <text class="bottom_desc" wx:if="{{item.least_cost}}">满{{item.least_cost / 100}}元使用</text>
+          <text class="bottom_desc" wx:else>全场通用券</text>
+        </view>
+        <view class="right_coupon_desc">
+          <view class="coupon_title public_omit_one">{{item.title}}</view>
+          <view class="coupon_text_desc">{{item.use_date}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</block>
+ <image mode="aspectFill" class="public_tips_coupon" src="../../images/crytiger2.png" wx:if="{{isShowImage == true}}"></image> 

@@ -1,0 +1,49 @@
+<view class="page">
+  <view class="pay_type_box">
+    <text class="pay_type_title">支付方式</text>
+    <text class="pay_type">在线支付</text>
+  </view>
+  <view class="public_padding" style="background:#f3f3f3;"></view>
+
+  <view class="input_box">
+    <text class="input_title">您可填写您的姓名和电话，方便商家和您取得联系</text>
+    <view class="input_cont">
+      <text class="input_name">姓名：</text>
+      <input value="{{nickname}}" style="padding-left:10rpx;"  maxlength="10" bindblur="writeName"/>
+    </view>
+    <view class="input_cont">
+      <text class="input_name">*电话：</text>
+      <input type="number" style="padding-left:10rpx;" value="{{telphone}}" maxlength="11" bindblur="writeTel"/>
+    </view>    
+  </view>
+
+  <view class="order_title">订单内容</view>
+  <view class="order_dish_list" wx:for="{{order_info.menu_list}}" wx:key="{{item.menu_id}}">
+    <view class="dish_name public_omit_one">{{item.menu_title}}</view>
+    <text class="dish_count">×{{item.menu_count}}</text>
+    <text class="dish_price">￥{{item.menu_discount_price ? item.menu_discount_price / 100 : item.menu_price / 100}}</text>
+  </view>    
+
+  <view class="order_line" style="margin-top:10rpx;"></view>   
+  <view class="coupon_box" bindtap="chooseCoupon">
+    <text class="coupon_title">我的优惠券</text>
+    <image src="../../images/jiantou.png" class="coupon_arrow"></image>
+     <text class="coupon_name">{{chooseCoupon}}</text>     
+  </view>
+  <view class="order_line"></view>   
+
+  <view class="order_price_box">
+    <text class="cash_price">待支付：￥{{(order_info.total_fee - coupon_fee) / 100}}</text>
+    <text class="coupon_price" wx:if="{{coupon_fee != ''}}">减免：￥{{coupon_fee / 100}}</text>
+    <text class="coupon_price" wx:else>无减免</text>  
+    <text class="totle_price">总价：￥{{order_info.total_fee / 100}}</text>    
+  </view>
+  <view style="background:#f3f3f3; width:100%;height:16rpx; "></view>
+  <view class="order_title">订单备注</view>
+  <textarea class="order_remark" value="{{remark}}" bindblur="whiteRemark"/>
+
+  <view class="fix_box">
+    <view class="pay_price_box">待支付<text>￥{{(order_info.total_fee - coupon_fee) / 100}}</text></view>
+    <view class="create_order_btn" bindtap="submit">提交订单</view>
+  </view>
+</view>

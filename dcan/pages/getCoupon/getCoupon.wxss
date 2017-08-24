@@ -1,0 +1,178 @@
+/* 优惠劵详情 */
+
+.content {
+  width: 750rpx;
+  height: 256rpx;
+}
+
+.bgd {
+  width: 548rpx;
+  height: 256rpx;
+  margin: 0rpx 34rpx 0 20rpx;
+  position: relative;
+}
+
+.imgs {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.top {
+  width: 100%;
+  height: 208rpx;
+  z-index: 999;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.ownCard, .zbCard {
+  width: 100%;
+}
+
+.zbCard {
+  margin-bottom: 30rpx;
+}
+
+.headtitle {
+  padding-left: 20rpx;
+  margin: 12rpx 0;
+  height:50rpx;
+  line-height: 50rpx;
+}
+
+.headtitlemoreicon {
+  height: 40rpx;
+  font-family: PingFangSC-Medium;
+  font-size: 28rpx;
+  color: #4a4a4a;
+  font-weight: bold;
+}
+
+.content .item_left .size {
+  width: 80rpx;
+  height: 80rpx;
+  background: #d8d8d8;
+  border-radius: 100%;
+  margin: 26rpx 0 130rpx 30rpx;
+}
+
+.content .item_left {
+  float: left;
+  height: 208rpx;
+  z-index: 80;
+}
+
+.item_right {
+  width: 412rpx;
+  float: left;
+}
+
+.leftside .one {
+  font-family: PingFangSC-Regular;
+  font-size: 24rpx;
+  color: #4a4a4a;
+  line-height: 24rpx;
+}
+
+.leftside .two text {
+  font-family: PingFangSC-Regular;
+  font-size: 16px;
+  color: #4a4a4a;
+}
+
+.leftside {
+  width: 292rpx;
+  float: left;
+  margin-top: 38rpx;
+  margin-left: 16rpx;
+}
+
+.rightside {
+  margin-top: 40rpx;
+  position: relative;
+  height: 120rpx;
+  margin-right: 20rpx;
+}
+
+.content .rightTop .title {
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #666;
+}
+
+.content .rightTop {
+  border-bottom: 1px solid #f6f6f6;
+  padding-bottom: 10px;
+  overflow: hidden;
+}
+
+.titles {
+  font-family: PingFangSC-Medium;
+  font-size: 32rpx;
+  color: #666;
+  font-weight: bold;
+  line-height: 60rpx;
+}
+
+.sideone, .sidetwo {
+  float: right;
+}
+
+.find {
+  width: 96rpx;
+  height: 44rpx;
+  display: flex;
+  font-family: PingFangSC-Regular;
+  font-size: 24rpx;
+  color: #f7d346;
+  border: 2rpx solid #f7d346;
+  border-radius: 4rpx;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: -6rpx;
+  top: 12rpx;
+}
+
+.finded {
+  font-family: PingFangSC-Light;
+  font-size: 20rpx;
+  color: #666;
+  margin-top: 44rpx;
+  position: absolute;
+  right: -6rpx;
+  top: 58rpx;
+}
+
+.sideone {
+  width: 100rpx;
+  height: 48rpx;
+  position: absolute;
+  top: 0;
+  right: 10rpx;
+}
+
+.sidetwo {
+  position: absolute;
+  top: 80rpx;
+  right: 10rpx;
+}
+
+.bottom {
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-family: PingFangSC-Light;
+  font-size: 20rpx;
+  color: #666;
+  z-index: 999;
+  position: absolute;
+  left: 0;
+  bottom: 10rpx;
+  padding-left: 30rpx;
+}

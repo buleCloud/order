@@ -1,0 +1,37 @@
+<template name="dish_list"> 
+    <view class="dish_list" bindtap="goDetailsPage" data-lid="{{lid}}" data-title="{{title}}">
+      <view class="left_dish_cover">
+        <image src="https://cdnrs.xianlaohu.com{{cover_img}}" wx:if="{{cover_img}}" mode="aspectFill" ></image>
+        <image src="../../../images/grey.png" wx:else mode="aspectFill" ></image>
+      </view>
+      <view class="right_dish_cont">
+        <view class="public_omit_one dish_title">{{title}}</view>
+        <view class="public_omit_one dish_desc">{{description}}</view>
+        <view class="dish_comment" wx:if="{{like_eating_count}}">
+          <text wx:if="{{like_eating_count}}">{{like_eating_count}}人想吃</text>
+        </view>
+        <view class="dish_bottom">
+          <text class="discount_price" wx:if="{{discount_price / 100}}">￥{{discount_price / 100}}</text>
+          <text class="discount_price" wx:else>￥{{price / 100}}</text>
+          
+          <text class="price" wx:if="{{discount_price}}">￥{{price / 100}}</text>
+          <image src="../../images/add.png" class="addDish" catchtap="addDish" 
+            data-menu_id="{{menu_id}}"
+            data-menu_discount_price="{{discount_price}}"
+            data-menu_price="{{price}}"
+            data-menu_title="{{title}}"></image>
+          <text class="dishCount" wx:if="{{menu_count > 0}}">{{menu_count}}</text>        
+            <image class="reduceDish" catchtap="reduceDish"
+            data-menu_count="{{menu_count}}"
+            data-menu_id="{{menu_id}}"
+            data-menu_discount_price="{{discount_price}}"
+            data-menu_price="{{price}}"
+            data-menu_title="{{title}}" wx:if="{{menu_count > 0}}" src="../../images/reduce.png"></image>
+        </view>
+      </view>
+     </view> 
+    <!-- 动画小球 -->
+      <block wx:if="{{animateObj.animatePath}}">  
+      <view class="xiaoqiu xiaoqiuYD" style="left:{{animateObj.animateX}}rpx;top:{{animateObj.animateY}}rpx;"></view>
+      </block>         
+ </template>

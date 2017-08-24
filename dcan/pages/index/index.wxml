@@ -1,0 +1,45 @@
+<import src="../broadside/broadside.wxml" />
+<import src="../getCoupon/getCoupon.wxml" />
+<import src="../dish/list/list.wxml" />
+<import src="../shopCart/shopCart.wxml" />
+<view class="page">
+  <view class="header">
+    <image src="../../images/banner.png" class="header_bg_img" mode="aspectFill" ></image>
+    <image src="https://cdnrs.xianlaohu.com{{home_vo.logo}}" class="header_cover_img" wx:if="{{home_vo.logo}}" mode="aspectFill" ></image>
+    <image src="../../images/grey.png" class="header_cover_img" wx:else mode="aspectFill" ></image>
+    <image src="../../images/me.png" class="header_user" bindtap="goHome"></image>
+    <view class="header_text_box">
+      <view class="header_title public_omit_one">{{home_vo.name}}</view>
+      <view class="header_desc public_omit_one" wx:if="{{home_vo.notice}}">公告：{{home_vo.notice}}</view>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" class="left_slider">
+
+    <view class="broad_side_box {{click_coupon == '1' ? 'broad_active':''}}" catchtap="chooseCoupon" wx:if="{{home_vo.has_open_card == 1}}">
+      <view class="cardCenter">优惠券</view>
+    </view>
+    <template is="broadside" data="{{...item, category_id}}" wx:for="{{category_list}}" wx:key="id" />
+  </scroll-view>
+
+  <scroll-view scroll-y="true" class="right_slider {{click_coupon == '0'? 'public_padding_size' : ''}}">
+    <block wx:if="{{click_coupon == '0'}}">
+      <template is="dish_list" data="{{...item , animateObj}}" wx:for="{{menu_list}}" wx:key="menu_id" />
+      <image class="public_tips_dish" src="../../images/crytiger1.png" wx:if="{{listBg == true}}"></image>
+    </block>
+    <view class="coupon" style="height:950rpx" wx:if="{{click_coupon == '1'}}" data-couponid="{{cardid}}">
+      <view class="owncoupon">
+        <view class='headtitle' wx:if="{{zbcardTitle > 0}}"><text class='headtitlemoreicon'>本店优惠</text></view>
+        <template is="owncoupon" data="{{...item}}" wx:for="{{zbcardInfo}}" wx:key="{{item.card_id}}" />
+      </view>
+      <view class="zbcoupon">
+        <view class='headtitle' wx:if="{{woncardTitle > 0}}"><text class='headtitlemoreicon'>周边优惠</text></view>
+        <template is="zbcoupon" data="{{...item}}" wx:for="{{woncardInfo}}" wx:key="{{item.card_id}}" />
+      </view>
+    </view>
+
+  </scroll-view>
+  <view class="shopCart_box" wx:if="{{click_coupon == '0'}}">
+    <template is="shop_cart" data="{{...shopCart , cart_exist_status}}" />
+  </view>
+  <view class="public_mask_layer" bindtap="mask_layer_click" wx:if="{{cart_exist_status}}"></view>
+</view>

@@ -1,0 +1,63 @@
+  <template name="shop_cart">
+    <view class="shop_cart_box">
+      <view class="cart_cover" catchtap="shopcart_click">
+        <image src="../../images/car.png"></image>
+        <text class="add_dish_num">{{total_count}}</text>
+      </view>
+      <view class="cart_cont">
+          <view class="not_choose" wx:if="{{total_count == 0}}">未选购商品</view>   
+          <view class="price_box" wx:else>
+          <block wx:if="{{has_dis_count > 0}}">
+            <text class="total_discount_price">￥{{total_fee / 100}}</text>
+            <text class="total_price">￥{{original_fee / 100}}</text>
+          </block>
+          <block wx:else>
+            <text class="total_discount_price">￥{{original_fee / 100}}</text>
+          </block>          
+        </view>  
+      </view>
+      <view class="go_pay" wx:if="{{total_count > 0}}" bindtap="goPay">去结算</view>
+    </view>
+    <block wx:if="{{cart_exist_status}}">
+        <view class="shop_cart_list">
+          <view class="public_padding" style="border-top:2rpx solid #ededed;"></view>
+          <block wx:if="{{menu_list.length > 0}}">
+            <view class="shop_dish_list" wx:for="{{menu_list}}" wx:key="item.menu_id" >
+              <view class="shop_dish_title public_omit_one">{{item.menu_title}}</view>
+              <view class="shop_list_edit">
+                <image src="../../images/add.png" class="shop_addDish"
+                  data-menu_id="{{item.menu_id}}"
+                  data-menu_discount_price="{{item.menu_discount_price}}"
+                  data-menu_price="{{item.menu_price}}"
+                  data-menu_title="{{item.menu_title}}"
+                catchtap="addDish"></image>
+                <text class="shop_dishCount">{{item.menu_count}}</text>
+                  <image src="../../images/reduce.png" class="shop_reduceDish"
+                  data-menu_count="{{item.menu_count}}"
+                  data-menu_id="{{item.menu_id}}"
+                  data-menu_discount_price="{{item.menu_discount_price}}"
+                  data-menu_price="{{item.menu_price}}"
+                  data-menu_title="{{item.menu_title}}" wx:if="{{item.menu_count > 0}}" catchtap="reduceDish"></image>
+              </view>
+              
+              <block wx:if="{{item.menu_discount_price}}">
+                <view class="shop_dish_price">
+                  <text class="shop_dish_discount_price">￥{{item.menu_discount_price / 100}}</text>
+                  <text class="shop_dish_init_price">￥{{item.menu_price / 100}}</text>
+                </view>
+              </block>
+              <block wx:else>
+                <view class="shop_dish_price">
+                  <text class="shop_dish_discount_price">￥{{item.menu_price / 100}}</text>
+                </view>
+              </block>            
+            </view> 
+          </block>     
+
+          <block wx:else>
+            <view class="shop_dish_list" style="font-size:28rpx;color:#666">未选购商品哦~</view>
+          </block>   
+          <view class="public_padding_big"></view>
+        </view>
+    </block>
+  </template>  

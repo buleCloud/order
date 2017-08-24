@@ -1,0 +1,22 @@
+@import "../coupon/coupon.wxss";
+
+.yhj-user {
+  width: 36rpx;
+  height: 36rpx;
+  color: #ffaf58;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  position: absolute;
+  left: 624rpx;
+  top: 80rpx;
+}
+
+.xuanze {
+  width: 38rpx;
+  height: 38rpx;
+  background-color: #ffaf58;
+  position: absolute;
+  left: 624rpx;
+  top: 80rpx;
+  border-radius: 50%;
+}

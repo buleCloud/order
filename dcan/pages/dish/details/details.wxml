@@ -1,0 +1,57 @@
+<import src="../../shopCart/shopCart.wxml" />
+<view class="page">
+  <view class="details_box">
+    <view class="pic_box">
+      <image src="https://cdnrs.xianlaohu.com{{dishInfo.cover_img}}" wx:if="{{dishInfo.cover_img}}" aspectFill></image>
+      <image src="../../../images/details_cover.png" aspectFill wx:else></image>
+      <view class="public_mask"></view>
+      <block wx:if="{{!isLike}}">
+        <view class="like_eat" bindtap="likeEat">
+          <image class="like_icon" src="../../../images/xiangchi.png" wx:if="{{isLike == false}}"></image>
+          <image class="like_icon" src="../../../images/dianzan.png" wx:else></image>
+          <text>想吃</text>
+        </view>
+      </block>
+      <block wx:if="{{isLike}}">
+        <view class="like_eat">
+          <image class="like_icon" src="../../../images/xiangchi.png" wx:if="{{isLike == false}}"></image>
+          <image class="like_icon" src="../../../images/dianzan.png" wx:else></image>
+          <text>想吃</text>
+        </view>
+      </block>
+    </view>
+
+    <view class="details_title public_omit_one">{{dishInfo.title}}</view>
+    <view class="details_price_box">
+      <view class="left_details_price" wx:if="{{dishInfo.discount_price}}">
+        <text class="discount_price"><text class="dis_cont">优惠价</text>￥{{dishInfo.discount_price / 100}}</text>
+        <text class="price">原价￥{{dishInfo.price / 100}}</text>
+      </view>
+      <view class="left_details_price" wx:else>
+        <text class="discount_price"><text class="dis_cont"></text>￥{{dishInfo.price / 100}}</text>
+      </view>
+      <view class="right_details_btn" bindtap="addDish" data-menu_id="{{dishInfo.menu_id}}" data-menu_discount_price="{{dishInfo.discount_price}}" data-menu_price="{{dishInfo.price}}" data-menu_title="{{dishInfo.title}}">加入购物车</view>
+    </view>
+    <view class="details_desc" wx:if="{{dishInfo.description}}">
+      <text class="point"></text>
+      <text class="details_desc_cont">{{dishInfo.description}}</text>
+      <text class="public_padding"></text>
+    </view>
+
+    <view class="discount_state" wx:if="{{dishInfo.privilege}}">优惠说明</view>
+    <view class="details_desc" wx:if="{{dishInfo.privilege}}">
+      <text class="point"></text>
+      <text class="details_desc_cont">{{dishInfo.privilege}}</text>
+      <text class="public_padding"></text>
+    </view>
+
+    <view class="shopCart_box">
+      <template is="shop_cart" data="{{...shopCart , cart_exist_status}}" />
+    </view>
+  </view>
+  <view class="public_mask_layer" bindtap="mask_layer_click" wx:if="{{cart_exist_status}}"></view> 
+  <!-- 动画小球 -->
+  <block wx:if="{{animateObj.animatePath}}">
+    <view class="xiaoqiu xiaoqiuYD" style="left:{{animateObj.animateX}}rpx;top:{{animateObj.animateY}}rpx;"></view>
+  </block>
+</view>

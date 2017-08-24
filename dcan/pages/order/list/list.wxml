@@ -1,0 +1,32 @@
+ <view class="page public_grey_bg">
+  <view wx:for="{{order_list}}" wx:key="{{item.out_trade_no}}">
+    <view style="width:100%;height:16rpx;background:#ededed;"></view>
+    <view class="order_list" bindtap="goOrderDetails"  data-out_trade_no="{{item.out_trade_no}}">
+      <view class="order_list_cont">
+        <view class="order_out_title">{{item.order_create_time}}</view>
+
+        <view class="order_dish">
+          <view class="left_order_dish_info">
+            <view style="width:100%;height:25rpx;"></view>
+            <view class="max_dish_width">
+              <view class="{{item.order_menu_list.length > 1?'more_line_dish':'one_line_dish'}}" wx:for="{{item.order_menu_list}}" wx:for-item="dish_item" wx:key="{{dish_item.id}}">
+                <text class="left_title">{{dish_item.title}}</text>
+                <text class="right_price" wx:if="{{dish_item.discount_price}}">￥{{dish_item.discount_price / 100}}</text>
+                <text class="right_price" wx:else>￥{{dish_item.price / 100}}</text>
+              </view>       
+            </view>
+            <view style="width:100%;height:25rpx;"></view>       
+          </view>
+          <view class="right_order_dish_status" wx:if="{{item.trade_status == 1}}">已支付</view>      
+          <view class="right_order_dish_status" wx:else>未支付</view>       
+        </view>
+
+        <view class="order_bottom_box">
+          <text>共{{item.order_menu_count}}件商品</text>
+          <view class="order_price">￥{{item.cash_fee / 100}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <image class="public_tips_dish" src="../../../images/not_order.png" wx:if="{{order_status == true}}"></image> 
+</view> 

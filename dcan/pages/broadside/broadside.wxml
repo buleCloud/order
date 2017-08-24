@@ -1,0 +1,20 @@
+<template name="broadside">
+  <view class="broad_side_box {{category_id == id?'broad_active':''}}" catchtap="chooseCategory" data-id="{{id}}">
+    <block wx:if="{{!tag_id}}">
+      <view class="broad_text" wx:if="{{name.length <= 4}}">{{name}}</view>
+      <view class="broad_text_more" wx:else>{{name}}</view>
+    </block>
+    <block wx:else>
+    <view class="left_icon">
+      <block wx:if="{{tag_id == 1}}">
+        <image src="../../images/hot_icon.png"></image>
+      </block>
+      <block wx:else>
+        <image src="../../images/coupon_icon.png"></image>
+      </block>      
+    </view>
+    <view class="right_text">{{name}}</view>
+    <view style="clear:both;"></view>
+    </block>    
+  </view>
+</template>

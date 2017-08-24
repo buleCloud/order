@@ -1,0 +1,119 @@
+/**app.wxss**/
+@import "pages/broadside/broadside.wxss";
+@import "pages/getCoupon/getCoupon.wxss";
+@import "pages/dish/list/list.wxss";
+@import "pages/shopCart/shopCart.wxss";
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+.page {
+  font-family: PingFangSC-Medium;
+  color: #4a4a4a;
+  font-size: 24rpx;
+  background: #fff;
+}
+
+.public_grey_bg {
+  width: 100%;
+  height: 100%;
+  background: #f3f3f3;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.public_omit_one {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.public_mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #000;
+  opacity: 0.2;
+  z-index: 10;
+}
+
+.public_padding {
+  width: 100%;
+  height: 20rpx;
+  clear: both;
+  display: block;
+}
+
+.public_padding_big {
+  width: 100%;
+  height: 40rpx;
+  clear: both;
+  display: block;
+}
+
+.public_tips_coupon {
+  width: 180rpx;
+  height: 276rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -138rpx 0 0 -90rpx;
+}
+
+/* .public_tips_coupon{
+  width:150rpx;
+  height:230rpx;
+  position: absolute;
+  left:50%;
+  top:50%;
+  margin:-130rpx 0 0 -75rpx; 
+} */
+
+.public_padding_size {
+  padding-bottom: 100rpx;
+  box-sizing: border-box;
+}
+
+.public_tips_dish {
+  width: 100rpx;
+  height: 153rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -100rpx 0 0 -50rpx;
+}
+
+.public_mask_layer {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  opacity: 0.3;
+}
+
+/*购物车*/
+
+.shopCart_box {
+  width: 100%;
+  height: 90rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+}

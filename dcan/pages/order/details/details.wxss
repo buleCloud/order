@@ -1,0 +1,23 @@
+@import "../../pay/pay.wxss";
+
+.caller{
+  width:140rpx;
+  height:40rpx;
+  border:1px solid #f4b31c;
+  border-radius:40px;
+  margin:40rpx auto;
+  text-align: center;
+  line-height: 40rpx;
+  color:#f4b31c;
+}
+.remark_info_box{
+  width:92%;
+  height:auto;
+  margin:20rpx auto 0;
+}
+.remark_info_box text{
+  display: block;
+  width:100%;
+  height:50rpx;
+  line-height: 50rpx;
+}
